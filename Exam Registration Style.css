@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* the main background */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 215, 239);
+}
+
+/* Login page styling
+
+-- the login page box */
+.login-container {
+    width: 100%;
+    max-width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(151, 183, 226);
+    padding: 50px 50px 70px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, and color */
+}
+
+/* the CSN EXAM REGISTRATION FORMATTING */
+.login-container h2 {
+    font-size: 30px;
+    margin-bottom: 45px;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+
+/* adds a line under the title */
+.login-container h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    border-radius: 3px;
+    background: black;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* styles the user and pass boxes */
+.input-field {
+    background: #eaeaea;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+/* aligns the user and pass placeholders correctly */
+input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+
+/* adds spacing between the user and pass icons and adds color */
+.input-field i {
+    font-size: 14px;
+    margin-left: 15px;
+    color: #999;
+}
+
+button {
+    transition: transform 0.3s ease; /* Smooth transition for movement */
+}
+
+/* Button styling inside .btn-field */
+.btn-field button {
+    width: 60%;
+    background: #ada4a4; /* Default background color */
+    height: 35px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for both background color and transform */
+}
+
+/* Button hover effect */
+.btn-field button:hover {
+    background-color: rgb(84, 125, 176); /* Hover background color */
+    transform: translateY(-3px); /* Move the button up slightly */
+}
+
+/* styles the error message */
+.error-message {
+    margin: 15px;
+    color: #972525;
+}
+
+/*Dashboard page styling */
+
+/* the dashboard page box */
+.dashboard-container {
+    width: 90%; /* 90% of the page width */
+    height: 90vh; /* 90% of the page height */
+    margin: 20px; /* Add a gap at the top */
+    background-color: rgb(151, 183, 226); /* Just for visual effect */
+    padding: 20px; /* Optional padding inside the container */
+    border-radius: 8px; /* Optional rounded corners */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* styles any h2 header in the dashboard container */
+.dashboard-container h2 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+
+/* styles any h3 header in the dashboard container */
+.dashboard-container h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+
+/* Make the .logout-button container a flexbox */
+.logout-button {
+    display: flex;                /* Align the button in a row */
+    justify-content: flex-end;    /* Align the button to the left */
+    align-items: center;          /* Vertically center the items */
+    width: 100%;                  /* Ensure the container takes full width */
+    position: absolute;           /* Position it absolutely */
+    top: 10px;                    /* Adjust to your desired distance from the top */
+    right: 10px;                  /* Adjust to your desired distance from the right */
+    margin: 20px;
+}
+
+/* Style for the icon inside the button */
+.logout-button i {
+    font-size: 14px;              /* Make the icon smaller */
+    color: black;               /* Icon color */
+    margin-left: 8px;             /* Space between text and icon */
+}
+
+/* Style for the logout button */
+#logout-btn {
+    background-color: #999;
+    color: black;
+    padding: 10px 20px;           /* Padding inside the button */
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;         /* Ensures icon and text are aligned horizontally */
+    align-items: center;          /* Center the icon and text vertically */
+    white-space: nowrap;          /* Prevents the text from wrapping to a new line */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Add hover effect */
+#logout-btn:hover {
+    background-color: rgb(84, 125, 176);
+    transform: translateY(-3px); /* Move the button up slightly */
+}
+
+/* Style for the button */
+.dashboard-button {
+    background-color: #999;    /* Blue background */
+    color: black;              /* White text */
+    padding: 10px 20px;          /* Padding for size */
+    font-size: 14px;             /* Text size */
+    border: none;                /* no border */
+    border-radius: 5px;          /* Rounded corners */
+    cursor: pointer;             /* Pointer cursor */
+    transition: all 0.3s ease;   /* Smooth transitions for hover */
+    margin: 20px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* adds hover effect to dashboard button */
+.dashboard-button:hover {
+    background-color: rgb(84, 125, 176);
+    transform: translateY(-3px); /* Move the button up slightly */
+}
+
+/* Blue box in Exam Selection */
+.register-container {
+    width: 100%;
+    max-width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(151, 183, 226);
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, and color */
+    align-items: center;
+}
+
+/* styles the h2 header in the register page */
+.register-page h2 {
+    text-align: center;              /* Center the heading (optional) */
+    margin-top: 40px;            /* Add space below the heading */
+}
+
+/* styles the dropdown menus */
+select {
+    display: block;                 /* Stack the dropdowns vertically */
+    width: 80%;                    /* Make dropdowns full width */
+    max-width: 300px;               /* Set a max width for dropdowns */
+    margin: 15px auto;              /* Center dropdowns and add spacing */
+    padding: 10px 10px;             /* Add padding inside the dropdowns */
+    border: none;                   /* Add a border */
+    border-radius: 5px;             /* Rounded corners */
+    font-size: 13px;                /* Font size for readability */
+    background-color: eaeaea;       /* Light background color */
+    cursor: pointer;                /* Pointer on hover */
+    text-align: center;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+/* styles the buttons when they are disabled */
+select:disabled {
+    background-color: #cccdce;      /* Gray background for disabled state */
+    cursor: not-allowed;            /* Show 'not-allowed' cursor */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* styles the buttons */
+.btn-selection {
+    display: flex;                /* Use Flexbox */
+    gap: 15px;                    /* Add spacing between buttons */
+    justify-content: center;      /* Center-align buttons (optional) */
+    align-items: center;          /* Vertically align buttons */
+    margin: 20px;             /* Add spacing above container */
+}
+
+/* styles the buttons */
+.btn-selection button {
+    flex: 1;                      /* Make all buttons equal width */
+    max-width: 150px;             /* Optional: Set a max width */
+    height: 35px;                 /* Standardize height */
+    padding: 10px 10px;           /* Padding inside the button */
+    border: none;                 /* Remove default border */
+    border-radius: 5px;           /* Rounded corners */
+    background-color: rgb(115, 158, 213);    /* Example: Blue background */
+    color: #3f3e3e;                 /* White text */
+    font-size: 14px;              /* Consistent font size */
+    text-align: center;           /* Center-align text inside buttons */
+    cursor: pointer;              /* Pointer cursor on hover */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-selection button:hover {
+    background-color: rgb(84, 125, 176); /* Hover background color */
+    transform: translateY(-3px); /* Move the button up slightly */
+}

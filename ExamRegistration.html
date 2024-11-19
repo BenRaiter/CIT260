@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSN Exam Registration</title>
+        <link rel="stylesheet" href="Exam Registration Style.css">
+        <script src="https://kit.fontawesome.com/ac32d89f93.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <!-- Login Page-->
+        <div id="login-page" class="login-container">
+            <h2>CSN Exam Registration</h2>
+            <form id="loginForm">
+                <div class="login-group">
+                    <!-- Username -->
+                    <div class="input-field">
+                        <i class="fa-solid fa-user-large"></i>
+                        <input type="text" id="username" placeholder="Username">
+                    </div>
+
+                    <!-- Password -->
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="password" placeholder="Password">
+                    </div>
+
+                    <!-- Error message -->
+                     <div class="error-message">
+                        <p class="error" id="errorMsg"></p> <!-- Error message will appear here-->
+                     </div>
+
+                    <!-- Login button-->
+                    <div class="btn-field">
+                        <button type="submit" id="signInBtn">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Dashboard Page -->
+        <div id="dashboard-page" class="dashboard-container" style="display:none">
+            <h2>Welcome, <span id="welcome-user"></span></h2>
+            <!-- Registered exams -->
+            <div class="registered-exams-section">
+                <h3>Registered Exams</h3>
+                <ul id="registered-exams">
+                    <!-- Registered exams will be listed here dynamically -->
+                </ul>
+                <!-- Go to register button -->
+                <div class="register-button">
+                    <button class="dashboard-button" id="go-to-register-btn">Register New Exam</button>
+                </div>
+            </div>
+        
+            <!-- Logout button -->
+            <div class="logout-button">
+                <button class="logout-btn" id="logout-btn">
+                    Logout <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Exam Registration Page-->
+        <div id="register-page" class="register-container" style="display:none">
+            <div class="dropdown-container">
+                <h2>Exam Registration</h2>
+                <!-- Exam Dropdown -->
+                <label for="examDropdown"></label>
+                <select id="examDropdown">
+                    <option value="" disabled selected>Exam</option>
+                    <!-- Exam options show up here -->
+                </select>
+                <!-- Location Dropdown -->
+                <label for="locationDropdown"></label>
+                <select id="locationDropdown" disabled>
+                    <option value="" disabled selected>Location</option>
+                    <!-- Location options show up here -->
+                </select>
+                <!-- Date Dropdown -->
+                <label for="dateDropdown"></label>
+                <select id="dateDropdown" disabled>
+                    <option value="" disabled selected>Date</option>
+                    <!-- Date options show up here -->
+                </select>
+                <!-- time Dropdown -->
+                <label for="timeDropdown"></label>
+                <select id="timeDropdown" disabled>
+                    <option value="" disabled selected>Time</option>
+                    <!-- Time options show up here-->
+                </select>
+                <!-- Back to dashboard and register for exam buttons -->
+                <div class="btn-selection">
+                    <button id="back-to-dashboard-btn">Dashboard</button>
+                    <button id="register-for-exam-btn">Register</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- JavaScript File-->
+        <script src="ExamRegistrationJS.js"></script>
+</body>
+</html>
